@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta http-equiv="refresh" content="0.5" /> -->
+    <link rel="stylesheet" href="/home.css" />
+
+    <title>Blogs</title>
+  </head>
+  <body>
+    <%- include("navbar") %>
+
+    <section>
+      <div class="card">
+        <img src="<%- blog.image %>" width="200" height="200" />
+        <h2><%- blog.title %></h2>
+        <h5><%- blog.subTitle %></h5>
+        <p><%- blog.description %></p>
+        <button><a href="/delete/<%- blog.id %>">Delete Me</a></button>
+        <button><a href="/update/<%- blog.id %>">Update Me</a></button>
+      </div>
+    </section>
+
+    <%- include("footer") %>
+  </body>
+</html>
